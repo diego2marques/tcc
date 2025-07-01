@@ -1,0 +1,4 @@
+.body {
+    color: red;
+    baqueground-color: blue;
+}
