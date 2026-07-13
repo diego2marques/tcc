@@ -1,0 +1,9 @@
+{
+  "requestedAt": "2026-06-30T22:56:47.574Z",
+  "status": 500,
+  "ok": false,
+  "body": {
+    "error": "fetch failed",
+    "requestId": "3c09e0788209"
+  }
+}

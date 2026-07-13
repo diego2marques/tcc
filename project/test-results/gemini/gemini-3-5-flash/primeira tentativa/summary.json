@@ -1,0 +1,57 @@
+{
+  "runId": "primeira tentativa",
+  "runStamp": "2026-07-01T17-06-54-002Z",
+  "startedAt": "2026-07-01T17:06:54.032Z",
+  "apiBaseUrl": "http://localhost:3000",
+  "protocol": "three-users-progression",
+  "executionConfig": {
+    "mode": "direct",
+    "tracks": [
+      "java"
+    ],
+    "fileFilter": null,
+    "startIndex": 1,
+    "endIndex": null,
+    "maxFilesPerTrack": 1,
+    "stopOnError": true
+  },
+  "modelInfo": {
+    "codeAnalysisModel": "gemini-3.5-flash",
+    "progressStateModel": "gemini-3.5-flash",
+    "consolidationModel": "gemini-3.5-flash",
+    "improvementModel": "gemini-3.5-flash"
+  },
+  "tracks": [
+    {
+      "track": "java",
+      "userName": "Java Progression",
+      "userEmail": "java.progression@teste.local",
+      "executions": [
+        {
+          "sequence": 1,
+          "track": "java",
+          "file": "junior_iniciante.java",
+          "inputRole": "Junior",
+          "appliedRole": "Junior",
+          "detectedRole": "Junior",
+          "stateDetectedLevel": "Junior",
+          "targetLevelStatus": "at_expected",
+          "promotionReadiness": "not_ready",
+          "nextRole": "Pleno",
+          "analysisId": "6a4549815cefed0bec6f6177",
+          "userStateId": "6a4549815cefed0bec6f6179",
+          "consolidationId": "6a4549815cefed0bec6f617b",
+          "improvementPlanId": "6a4549815cefed0bec6f617d",
+          "requestId": "be9cc7d4645a",
+          "ok": true,
+          "status": 200,
+          "error": "",
+          "rawResponseFile": "raw\\java-01-junior_iniciante.java.json"
+        }
+      ],
+      "firstDetectedPlenoAt": null,
+      "firstDetectedSeniorAt": null
+    }
+  ],
+  "finishedAt": "2026-07-01T17:08:17.540Z"
+}

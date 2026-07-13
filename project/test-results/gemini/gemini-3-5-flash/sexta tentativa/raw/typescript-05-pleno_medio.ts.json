@@ -1,0 +1,9 @@
+{
+  "requestedAt": "2026-07-01T18:34:14.130Z",
+  "status": 500,
+  "ok": false,
+  "body": {
+    "error": "Gemini API error (500): {\"error\":{\"message\":\"gemini-3.5-flash is currently experiencing high demand, spikes in demand are usually temporary. Please try again later.\",\"code\":\"api_error\"}}",
+    "requestId": "e5381070d828"
+  }
+}

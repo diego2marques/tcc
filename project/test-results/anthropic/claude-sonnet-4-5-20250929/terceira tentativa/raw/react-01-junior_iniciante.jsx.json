@@ -1,0 +1,9 @@
+{
+  "requestedAt": "2026-06-11T14:37:48.409Z",
+  "status": 500,
+  "ok": false,
+  "body": {
+    "error": "Anthropic API error (400): {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CbweE11MuvwGFcQf5D3HU\"}",
+    "requestId": "736f7bb9b576"
+  }
+}

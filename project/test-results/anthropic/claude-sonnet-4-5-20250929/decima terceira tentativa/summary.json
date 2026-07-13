@@ -1,0 +1,57 @@
+{
+  "runId": "decima terceira tentativa",
+  "runStamp": "2026-07-01T00-34-13-791Z",
+  "startedAt": "2026-07-01T00:34:13.813Z",
+  "apiBaseUrl": "http://localhost:3000",
+  "protocol": "three-users-progression",
+  "executionConfig": {
+    "mode": "direct",
+    "tracks": [
+      "java"
+    ],
+    "fileFilter": null,
+    "startIndex": 1,
+    "endIndex": 3,
+    "maxFilesPerTrack": 1,
+    "stopOnError": true
+  },
+  "modelInfo": {
+    "codeAnalysisModel": "claude-sonnet-4-5-20250929",
+    "progressStateModel": "claude-sonnet-4-5-20250929",
+    "consolidationModel": "claude-sonnet-4-5-20250929",
+    "improvementModel": "claude-sonnet-4-5-20250929"
+  },
+  "tracks": [
+    {
+      "track": "java",
+      "userName": "Java Progression",
+      "userEmail": "java.progression@teste.local",
+      "executions": [
+        {
+          "sequence": 1,
+          "track": "java",
+          "file": "junior_iniciante.java",
+          "inputRole": "Junior",
+          "appliedRole": "Junior",
+          "detectedRole": "Junior",
+          "stateDetectedLevel": "Junior",
+          "targetLevelStatus": "below_expected",
+          "promotionReadiness": "not_ready",
+          "nextRole": "Pleno",
+          "analysisId": "6a446214f733a70e2f70e86b",
+          "userStateId": "6a446214f733a70e2f70e86d",
+          "consolidationId": "6a446214f733a70e2f70e86f",
+          "improvementPlanId": "6a446214f733a70e2f70e871",
+          "requestId": "27956a31a504",
+          "ok": true,
+          "status": 200,
+          "error": "",
+          "rawResponseFile": "raw\\java-01-junior_iniciante.java.json"
+        }
+      ],
+      "firstDetectedPlenoAt": null,
+      "firstDetectedSeniorAt": null
+    }
+  ],
+  "finishedAt": "2026-07-01T00:40:52.034Z"
+}

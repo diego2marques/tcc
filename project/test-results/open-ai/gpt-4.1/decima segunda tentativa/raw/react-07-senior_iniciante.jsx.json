@@ -1,0 +1,9 @@
+{
+  "requestedAt": "2026-06-11T12:25:27.489Z",
+  "status": 500,
+  "ok": false,
+  "body": {
+    "error": "Erro ao analisar o arquivo.",
+    "requestId": "b4f496777233"
+  }
+}

@@ -1,0 +1,4 @@
+"sequence","track","file","inputRole","appliedRole","detectedRole","stateDetectedLevel","targetLevelStatus","promotionReadiness","nextRole","analysisId","userStateId","consolidationId","improvementPlanId","requestId","ok","error"
+"1","java","junior_iniciante.java","Junior","Junior","Junior","Junior","at_expected","not_ready","Pleno","6a44641420e2d7aa0b8cc6b0","6a44641420e2d7aa0b8cc6b2","6a44641420e2d7aa0b8cc6b4","6a44641420e2d7aa0b8cc6b6","6acf7b564a88","true",""
+"2","java","junior_medio.java","Junior","Junior","Junior","Junior","at_expected","getting_close","Pleno","6a44655d20e2d7aa0b8cc6bf","6a44655d20e2d7aa0b8cc6c1","6a44655d20e2d7aa0b8cc6c3","6a44655d20e2d7aa0b8cc6c5","65e8debdd9cf","true",""
+"3","java","junior_avancado.java","Junior","Junior","Pleno","Pleno","above_expected","ready","Senior","6a4466da20e2d7aa0b8cc6ce","6a4466da20e2d7aa0b8cc6d0","6a4466da20e2d7aa0b8cc6d2","6a4466da20e2d7aa0b8cc6d4","21da425a9589","true",""

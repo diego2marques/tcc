@@ -1,0 +1,9 @@
+{
+  "requestedAt": "2026-07-01T20:32:59.696Z",
+  "status": 500,
+  "ok": false,
+  "body": {
+    "error": "Gemini API error (400): {\"error\":{\"message\":\"Request blocked due to copyright/recitation content. Please modify your input and retry.\",\"code\":\"The generated content was filtered because it may contain material that resembles existing copyrighted works. Try rephrasing the prompt. If you think this was an error, [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting).\"}}",
+    "requestId": "a3811e442076"
+  }
+}

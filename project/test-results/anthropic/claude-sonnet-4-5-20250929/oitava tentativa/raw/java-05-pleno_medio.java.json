@@ -1,0 +1,9 @@
+{
+  "requestedAt": "2026-06-30T22:57:50.429Z",
+  "status": 500,
+  "ok": false,
+  "body": {
+    "error": "Anthropic request failed: fetch failed",
+    "requestId": "1f03dfc72804"
+  }
+}

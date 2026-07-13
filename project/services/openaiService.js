@@ -1,42 +1,57 @@
-const { OpenAI } = require('openai');
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const { runCodeAnalysisAgent } = require('./agents/codeAnalysisAgent');
+const { runProgressStateAgent } = require('./agents/progressStateAgent');
+const { runConsolidationAgent } = require('./agents/consolidationAgent');
+const { runImprovementAgent } = require('./agents/improvementAgent');
 
-async function analyzeCSSCode(newCode, previousCode = null) {
-  let = '';
-  if (previousCode) {
-    prompt = `
-        Você é um assistente que compara códigos CSS de um mesmo desenvolvedor em momentos diferentes.
-
-        Analise a versão antiga (A) e a nova (B) e diga:
-
-        1. Se o desenvolvedor melhorou e onde
-        2. Quais boas práticas foram mantidas
-        3. Quais problemas ainda persistem
-        4. Sugira fontes (como sites ou cursos) para ele estudar
-
-        VERSÃO A (antiga):
-        ${previousCode}
-
-        VERSÃO B (nova):
-        ${newCode}
-        `;
-  } else {
-    prompt = `
-        Você é um assistente de revisão de código CSS. Analise o seguinte código:
-
-        ${newCode}
-
-        Liste os acertos, erros e sugestões de melhoria.
-        `;
-  }
-
-  const response = await openai.chat.completions.create({
-    model: 'gpt-3.5-turbo',
-    messages: [{ role: 'user', content: prompt }],
-    temperature: 0.5,
+async function runAnalysisPipeline({
+  code,
+  language,
+  role,
+  previousAnalysis = null,
+  previousUserState = null,
+  previousImprovementPlan = null,
+}) {
+  const codeAnalysis = await runCodeAnalysisAgent({
+    code,
+    language,
+    role,
   });
 
-  return response.choices[0].message.content;
+  const progressState = await runProgressStateAgent({
+    language,
+    role,
+    currentAnalysis: codeAnalysis,
+    previousAnalysis,
+  });
+
+  const consolidation = await runConsolidationAgent({
+    language,
+    role,
+    detectedRole: progressState.detectedRole,
+    nextRoleOverride: progressState.nextRole,
+    currentState: progressState.currentState,
+    previousUserState,
+    previousImprovementPlan,
+  });
+
+  const improvement = await runImprovementAgent({
+    language,
+    role,
+    detectedRole: progressState.detectedRole,
+    nextRoleOverride: progressState.nextRole,
+    currentState: progressState.currentState,
+    consolidationReport: consolidation.consolidationReport,
+  });
+
+  return {
+    codeAnalysis,
+    currentState: progressState.currentState,
+    detectedRole: progressState.detectedRole,
+    stateSnapshot: progressState.stateSnapshot,
+    consolidationReport: consolidation.consolidationReport,
+    improvementPlan: improvement.improvementPlan,
+    nextRole: progressState.nextRole,
+  };
 }
 
-module.exports = { analyzeCSSCode };
+module.exports = { runAnalysisPipeline };

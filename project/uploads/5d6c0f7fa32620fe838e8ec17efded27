@@ -1,0 +1,69 @@
+type User = {
+  id: number;
+  name: string;
+  email: string;
+  active: boolean;
+};
+
+const users: User[] = [
+  { id: 1, name: 'Ana Silva', email: 'ana@example.com', active: true },
+  { id: 2, name: 'Bruno Lima', email: 'bruno@example.com', active: false },
+  { id: 3, name: 'Carla Souza', email: 'carla@example.com', active: true },
+];
+
+function findUser(id: any) {
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].id == id) {
+      return users[i];
+    }
+  }
+
+  return null;
+}
+
+function sendEmail(user: any, message: any) {
+  if (user == null) {
+    console.log('Usuario nao encontrado');
+    return;
+  }
+
+  if (user.active == false) {
+    console.log('Usuario inativo');
+    return;
+  }
+
+  console.log('Enviando email para ' + user.email + ': ' + message);
+}
+
+function activateUser(id: any) {
+  const user = findUser(id);
+
+  if (user != null) {
+    user.active = true;
+    console.log('Usuario ativado');
+  } else {
+    console.log('Usuario nao encontrado');
+  }
+}
+
+function deactivateUser(id: any) {
+  const user = findUser(id);
+
+  if (user != null) {
+    user.active = false;
+    console.log('Usuario desativado');
+  } else {
+    console.log('Usuario nao encontrado');
+  }
+}
+
+function run() {
+  const userId: any = '1';
+  const user = findUser(userId);
+
+  sendEmail(user, 'Bem-vindo ao sistema');
+  deactivateUser(userId);
+  activateUser(userId);
+}
+
+run();

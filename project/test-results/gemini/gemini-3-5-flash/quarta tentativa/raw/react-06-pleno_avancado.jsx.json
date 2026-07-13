@@ -1,0 +1,9 @@
+{
+  "requestedAt": "2026-07-01T17:36:57.526Z",
+  "status": 500,
+  "ok": false,
+  "body": {
+    "error": "Gemini API error (429): {\"error\":{\"message\":\"You do not have enough quota to make this request.\",\"code\":\"too_many_requests\"}}",
+    "requestId": "c4e199b5b156"
+  }
+}
